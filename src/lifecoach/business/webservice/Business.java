@@ -54,7 +54,7 @@ public interface Business
 
     @WebMethod(operationName="updateGoal")
     @WebResult(name="goalId") 
-    public int updateGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.localdb.lifecoach/") Goal goal);
+    public int updateGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.localdb.lifecoach/") Goal goal, @WebParam(name="oldTitle") String oldTitle);
     
     @WebMethod(operationName="deleteGoal")
     @WebResult(name="result") 

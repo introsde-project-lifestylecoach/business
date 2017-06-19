@@ -117,10 +117,21 @@ public class BusinessImplementation implements Business
     }
 
     @Override
-    public int updateGoal(int pId, Goal goal) {
+    public int updateGoal(int pId, Goal goal, String oldGoal) {
     	init();
     	System.out.println("Update Goal with id = " + goal.getIdGoal());
-    	return storage.updateGoal(pId, goal);
+
+	Goal g = storage.getGoalByTitle(oldGoal);
+	if(g == null)
+		g = new Goal();
+
+	g.setTitle(goal.getTitle());
+	g.setDescription(goal.getDescription());
+	g.setGoalType(goal.getGoalType());
+	g.setValue(goal.getValue());	
+	g.setMeasureType(goal.getMeasureType());
+
+    	return storage.updateGoal(pId, g);
     }
     
     @Override

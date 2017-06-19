@@ -17,9 +17,11 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="goalType" type="{http://webservice.localdb.lifecoach/}goalType" minOccurs="0"/>
  *         &lt;element name="idGoal" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="measureType" type="{http://webservice.localdb.lifecoach/}measureType" minOccurs="0"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="value" type="{http://www.w3.org/2001/XMLSchema}float"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -32,17 +34,21 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "goal", propOrder = {
     "date",
+    "description",
     "goalType",
     "idGoal",
     "measureType",
+    "title",
     "value"
 })
 public class Goal {
 
     protected String date;
+    protected String description;
     protected GoalType goalType;
     protected int idGoal;
     protected MeasureType measureType;
+    protected String title;
     protected float value;
 
     /**
@@ -67,6 +73,30 @@ public class Goal {
      */
     public void setDate(String value) {
         this.date = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà description.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Imposta il valore della proprietà description.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
     }
 
     /**
@@ -131,6 +161,30 @@ public class Goal {
      */
     public void setMeasureType(MeasureType value) {
         this.measureType = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà title.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * Imposta il valore della proprietà title.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
     }
 
     /**
