@@ -6,6 +6,10 @@ import lifecoach.localdb.webservice.Person;
 import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.jws.WebService;
 
 //Service Implementation
@@ -66,6 +70,12 @@ public class BusinessImplementation implements Business
     	}
     	else
     	{
+		// gen date
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		Date date = new Date();
+		// Add date to measure
+		measure.setDate(dateFormat.format(date));
+
     		System.out.println("QUa " + measure.getMeasureType().getType());
     	}
     	
