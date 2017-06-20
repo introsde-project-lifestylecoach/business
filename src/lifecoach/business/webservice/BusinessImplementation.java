@@ -209,7 +209,7 @@ public class BusinessImplementation implements Business
         {
         	System.out.println("Calcolate Bmi with: weight=" + weight + ", height=" + height + ", sex=" + p.getSex().toCharArray()[0]
               		 + ", age=" + age + ", waist=" + p.getWaist() + ", hip=" + p.getHip());
-        	b = storage.getBmi(weight, height, p.getSex().toCharArray()[0], age, p.getWaist(), p.getHip());
+        	b = storage.getBmi(weight, height, p.getSex().toLowerCase().toCharArray()[0], age, p.getWaist(), p.getHip());
         }
         
         if (b!=null) 
