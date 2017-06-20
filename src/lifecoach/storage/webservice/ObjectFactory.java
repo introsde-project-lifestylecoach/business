@@ -429,7 +429,6 @@ public class ObjectFactory {
     }
 
     /**
-<<<<<<< HEAD
      * Create an instance of {@link JAXBElement }{@code <}{@link GetBmiResponse }{@code >}}
      * 
      */
@@ -439,8 +438,6 @@ public class ObjectFactory {
     }
 
     /**
-=======
->>>>>>> 950738edf9bffbb159038cd4928ab235b15ca582
      * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalTypeListResponse }{@code >}}
      * 
      */

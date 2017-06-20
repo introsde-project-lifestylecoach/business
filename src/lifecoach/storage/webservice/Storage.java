@@ -269,21 +269,6 @@ public interface Storage {
 
     /**
      * 
-     * @param title
-     * @return
-     *     returns lifecoach.localdb.webservice.Goal
-     */
-    @WebMethod
-    @WebResult(name = "goal", targetNamespace = "")
-    @RequestWrapper(localName = "getGoalByTitle", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalByTitle")
-    @ResponseWrapper(localName = "getGoalByTitleResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalByTitleResponse")
-    @Action(input = "http://webservice.storage.lifecoach/Storage/getGoalByTitleRequest", output = "http://webservice.storage.lifecoach/Storage/getGoalByTitleResponse")
-    public Goal getGoalByTitle(
-        @WebParam(name = "title", targetNamespace = "")
-        String title);
-
-    /**
-     * 
      * @param personId
      * @param measureTypeId
      * @return
