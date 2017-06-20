@@ -185,7 +185,7 @@ public class BusinessImplementation implements Business
         	}
         }
         
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDate birthday = null;
         LocalDate today = LocalDate.now();
         try 

@@ -22,11 +22,11 @@ public interface Business
 
     @WebMethod(operationName="createPerson")
     @WebResult(name="personId") 
-    public int addPerson(@WebParam(name="person", targetNamespace="http://webservice.storage.lifecoach/") Person person);
+    public int addPerson(@WebParam(name="person", targetNamespace="http://webservice.business.lifecoach/") Person person);
 
     @WebMethod(operationName="updatePerson")
     @WebResult(name="personId") 
-    public int updatePerson(@WebParam(name="person", targetNamespace="http://webservice.storage.lifecoach/") Person person);
+    public int updatePerson(@WebParam(name="person", targetNamespace="http://webservice.business.lifecoach/") Person person);
 
     @WebMethod(operationName="deletePerson")
     @WebResult(name="result") 
@@ -37,11 +37,11 @@ public interface Business
     
     @WebMethod(operationName="createMeasure")
     @WebResult(name="measureId") 
-    public int addMeasure(@WebParam(name="personId") int pId, @WebParam(name="measure", targetNamespace="http://webservice.localdb.lifecoach/") Measure measure);
+    public int addMeasure(@WebParam(name="personId") int pId, @WebParam(name="measure", targetNamespace="http://webservice.business.lifecoach/") Measure measure);
 
     @WebMethod(operationName="updateMeasure")
     @WebResult(name="measureId") 
-    public int updateMeasure(@WebParam(name="personId") int pId, @WebParam(name="measure", targetNamespace="http://webservice.localdb.lifecoach/") Measure measure);
+    public int updateMeasure(@WebParam(name="personId") int pId, @WebParam(name="measure", targetNamespace="http://webservice.business.lifecoach/") Measure measure);
     
     @WebMethod(operationName="deleteMeasure")
     @WebResult(name="result") 
@@ -52,11 +52,11 @@ public interface Business
     
     @WebMethod(operationName="createGoal")
     @WebResult(name="goalId") 
-    public int addGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.localdb.lifecoach/") Goal goal);
+    public int addGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.business.lifecoach/") Goal goal);
 
     @WebMethod(operationName="updateGoal")
     @WebResult(name="goalId") 
-    public int updateGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.localdb.lifecoach/") Goal goal, @WebParam(name="oldTitle") String oldTitle);
+    public int updateGoal(@WebParam(name="personId") int pId, @WebParam(name="goal", targetNamespace="http://webservice.business.lifecoach/") Goal goal, @WebParam(name="oldTitle") String oldTitle);
     
     @WebMethod(operationName="deleteGoal")
     @WebResult(name="result") 
