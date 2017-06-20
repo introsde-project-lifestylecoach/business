@@ -7,7 +7,6 @@ import lifecoach.localdb.webservice.Person;
 import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
-
 import lifecoach.adaptor.webservice.Bmi;
 
 import java.util.List;
