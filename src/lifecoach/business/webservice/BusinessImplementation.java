@@ -2,15 +2,27 @@ package lifecoach.business.webservice;
 
 import lifecoach.storage.webservice.StorageService;
 import lifecoach.storage.webservice.Storage;
+
 import lifecoach.localdb.webservice.Person;
 import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
+import lifecoach.adaptor.webservice.Bmi;
+
+import java.util.List;
 import java.util.Date;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import javax.jws.WebService;
+
 
 //Service Implementation
 
@@ -70,7 +82,7 @@ public class BusinessImplementation implements Business
     	}
     	else
     	{
-		// gen date
+		// Gen date
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		Date date = new Date();
 		// Add date to measure
@@ -121,15 +133,15 @@ public class BusinessImplementation implements Business
     	init();
     	System.out.println("Update Goal with id = " + goal.getIdGoal());
 
-	Goal g = storage.getGoalByTitle(oldGoal);
-	if(g == null)
-		g = new Goal();
-
-	g.setTitle(goal.getTitle());
-	g.setDescription(goal.getDescription());
-	g.setGoalType(goal.getGoalType());
-	g.setValue(goal.getValue());	
-	g.setMeasureType(goal.getMeasureType());
+		Goal g = storage.getGoalByTitle(oldGoal);
+		if(g == null)
+			g = new Goal();
+	
+		g.setTitle(goal.getTitle());
+		g.setDescription(goal.getDescription());
+		g.setGoalType(goal.getGoalType());
+		g.setValue(goal.getValue());	
+		g.setMeasureType(goal.getMeasureType());
 
     	return storage.updateGoal(pId, g);
     }
@@ -139,5 +151,77 @@ public class BusinessImplementation implements Business
     	init();
     	System.out.println("Delete Goal with id = " + id);
     	return storage.deleteGoal(id);
+    }
+   
+    
+    /* Bmi */
+    
+    @Override
+    public Bmi getBmi(int pId) {
+    	int age;
+    	float height, weight;
+    	Bmi b;
+    	Person p;
+    	List<Measure> mL;
+    	
+    	init();    	
+    	System.out.println("Calcolate Bmi for person with id = " + pId);
+        
+        height = weight = age = 0; 
+        p = storage.readPerson(pId);
+        System.out.println("---> Found Person by id = " + pId + " => " + p.getFirstname());
+    	mL = storage.getLastMeasure(pId);
+    	
+        for(Measure m: mL)
+        {
+        	System.out.println("---> Found measure " + m.getMeasureType().getType() + " " + m.getValue());
+        	switch(m.getMeasureType().getType())
+        	{
+        		case "height":
+        			height = m.getValue();
+        			break;
+        		case "weight":
+        			weight = m.getValue();
+        			break;
+        	}
+        }
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate birthday = null;
+        LocalDate today = LocalDate.now();
+        try 
+        {
+        	birthday = LocalDate.parse(p.getBirthdate(), formatter);        	    	 
+         	Period period = Period.between(birthday, today);     	 
+         	age = period.getYears();
+         	System.out.println("--> Age = " + age);
+        }
+	    catch (DateTimeParseException e) 
+        {
+	        e.printStackTrace();
+	    }
+        
+        if(weight == 0 || height == 0 || age == 0)
+        {
+        	System.out.println("Error with height,weight or age");
+        	b = null;
+        }
+        else
+        {
+        	System.out.println("Calcolate Bmi with: weight=" + weight + ", height=" + height + ", sex=" + p.getSex().toCharArray()[0]
+              		 + ", age=" + age + ", waist=" + p.getWaist() + ", hip=" + p.getHip());
+        	b = storage.getBmi(weight, height, p.getSex().toCharArray()[0], age, p.getWaist(), p.getHip());
+        }
+        
+        if (b!=null) 
+        {
+            System.out.println("---> Bmi for = "+weight+" and "+height);
+        } 
+        else 
+        {
+            System.out.println("---> Error in calculating Bmi for = "+weight+" and "+height);
+        }
+        
+        return b;
     }
 }

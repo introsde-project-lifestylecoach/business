@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
+import lifecoach.adaptor.webservice.Bmi;
 import lifecoach.localdb.webservice.Goal;
 import lifecoach.localdb.webservice.GoalType;
 import lifecoach.localdb.webservice.Measure;
@@ -26,6 +27,7 @@ import lifecoach.localdb.webservice.Person;
 @WebService(name = "Storage", targetNamespace = "http://webservice.storage.lifecoach/")
 @XmlSeeAlso({
     lifecoach.localdb.webservice.ObjectFactory.class,
+    lifecoach.adaptor.webservice.ObjectFactory.class,
     lifecoach.storage.webservice.ObjectFactory.class
 })
 public interface Storage {
@@ -351,6 +353,21 @@ public interface Storage {
 
     /**
      * 
+     * @param title
+     * @return
+     *     returns lifecoach.localdb.webservice.Goal
+     */
+    @WebMethod
+    @WebResult(name = "goal", targetNamespace = "")
+    @RequestWrapper(localName = "getGoalByTitle", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalByTitle")
+    @ResponseWrapper(localName = "getGoalByTitleResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalByTitleResponse")
+    @Action(input = "http://webservice.storage.lifecoach/Storage/getGoalByTitleRequest", output = "http://webservice.storage.lifecoach/Storage/getGoalByTitleResponse")
+    public Goal getGoalByTitle(
+        @WebParam(name = "title", targetNamespace = "")
+        String title);
+
+    /**
+     * 
      * @param goalId
      * @return
      *     returns lifecoach.localdb.webservice.GoalType
@@ -375,5 +392,35 @@ public interface Storage {
     @ResponseWrapper(localName = "getGoalTypeListResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalTypeListResponse")
     @Action(input = "http://webservice.storage.lifecoach/Storage/getGoalTypeListRequest", output = "http://webservice.storage.lifecoach/Storage/getGoalTypeListResponse")
     public List<GoalType> getGoalTypeList();
+
+    /**
+     * 
+     * @param sex
+     * @param weight
+     * @param waist
+     * @param age
+     * @param hip
+     * @param height
+     * @return
+     *     returns lifecoach.adaptor.webservice.Bmi
+     */
+    @WebMethod
+    @WebResult(name = "bmi", targetNamespace = "")
+    @RequestWrapper(localName = "getBmi", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetBmi")
+    @ResponseWrapper(localName = "getBmiResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetBmiResponse")
+    @Action(input = "http://webservice.storage.lifecoach/Storage/getBmiRequest", output = "http://webservice.storage.lifecoach/Storage/getBmiResponse")
+    public Bmi getBmi(
+        @WebParam(name = "weight", targetNamespace = "")
+        float weight,
+        @WebParam(name = "height", targetNamespace = "")
+        float height,
+        @WebParam(name = "sex", targetNamespace = "")
+        int sex,
+        @WebParam(name = "age", targetNamespace = "")
+        int age,
+        @WebParam(name = "waist", targetNamespace = "")
+        float waist,
+        @WebParam(name = "hip", targetNamespace = "")
+        float hip);
 
 }

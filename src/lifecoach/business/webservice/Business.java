@@ -4,6 +4,8 @@ import lifecoach.localdb.webservice.Person;
 import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
+import lifecoach.adaptor.webservice.Bmi;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
@@ -59,5 +61,11 @@ public interface Business
     @WebMethod(operationName="deleteGoal")
     @WebResult(name="result") 
     public int deleteGoal(@WebParam(name="goalId") int id);
+    
+    
+    /* Bmi */
+    @WebMethod(operationName="getBmi")
+    @WebResult(name="bmi") 
+    public Bmi getBmi(@WebParam(name="personId") int pId);
     
 }

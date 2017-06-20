@@ -24,6 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetBmiResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getBmiResponse");
     private final static QName _GetGoalTypeListResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalTypeListResponse");
     private final static QName _GetLastMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasure");
     private final static QName _UpdateGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "updateGoalResponse");
@@ -50,6 +51,7 @@ public class ObjectFactory {
     private final static QName _UpdatePerson_QNAME = new QName("http://webservice.storage.lifecoach/", "updatePerson");
     private final static QName _GetMeasureTypeList_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureTypeList");
     private final static QName _DeleteGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteGoalResponse");
+    private final static QName _GetBmi_QNAME = new QName("http://webservice.storage.lifecoach/", "getBmi");
     private final static QName _DeleteMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteMeasure");
     private final static QName _GetGoalByTitleResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalByTitleResponse");
     private final static QName _ReadMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasureResponse");
@@ -72,6 +74,14 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetBmi }
+     * 
+     */
+    public GetBmi createGetBmi() {
+        return new GetBmi();
     }
 
     /**
@@ -232,6 +242,14 @@ public class ObjectFactory {
      */
     public CreatePersonResponse createCreatePersonResponse() {
         return new CreatePersonResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBmiResponse }
+     * 
+     */
+    public GetBmiResponse createGetBmiResponse() {
+        return new GetBmiResponse();
     }
 
     /**
@@ -411,6 +429,18 @@ public class ObjectFactory {
     }
 
     /**
+<<<<<<< HEAD
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBmiResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getBmiResponse")
+    public JAXBElement<GetBmiResponse> createGetBmiResponse(GetBmiResponse value) {
+        return new JAXBElement<GetBmiResponse>(_GetBmiResponse_QNAME, GetBmiResponse.class, null, value);
+    }
+
+    /**
+=======
+>>>>>>> 950738edf9bffbb159038cd4928ab235b15ca582
      * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalTypeListResponse }{@code >}}
      * 
      */
@@ -642,6 +672,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deleteGoalResponse")
     public JAXBElement<DeleteGoalResponse> createDeleteGoalResponse(DeleteGoalResponse value) {
         return new JAXBElement<DeleteGoalResponse>(_DeleteGoalResponse_QNAME, DeleteGoalResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBmi }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getBmi")
+    public JAXBElement<GetBmi> createGetBmi(GetBmi value) {
+        return new JAXBElement<GetBmi>(_GetBmi_QNAME, GetBmi.class, null, value);
     }
 
     /**
