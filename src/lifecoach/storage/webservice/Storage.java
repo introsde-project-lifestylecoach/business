@@ -170,6 +170,24 @@ public interface Storage {
 
     /**
      * 
+     * @param personId
+     * @param measureTypeId
+     * @return
+     *     returns lifecoach.localdb.webservice.Measure
+     */
+    @WebMethod
+    @WebResult(name = "measure", targetNamespace = "")
+    @RequestWrapper(localName = "getLastMeasureByType", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetLastMeasureByType")
+    @ResponseWrapper(localName = "getLastMeasureByTypeResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetLastMeasureByTypeResponse")
+    @Action(input = "http://webservice.storage.lifecoach/Storage/getLastMeasureByTypeRequest", output = "http://webservice.storage.lifecoach/Storage/getLastMeasureByTypeResponse")
+    public Measure getLastMeasureByType(
+        @WebParam(name = "personId", targetNamespace = "")
+        int personId,
+        @WebParam(name = "measureTypeId", targetNamespace = "")
+        String measureTypeId);
+
+    /**
+     * 
      * @param measure
      * @param personId
      * @return
@@ -245,6 +263,36 @@ public interface Storage {
     @ResponseWrapper(localName = "getMeasureTypeListResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetMeasureTypeListResponse")
     @Action(input = "http://webservice.storage.lifecoach/Storage/getMeasureTypeListRequest", output = "http://webservice.storage.lifecoach/Storage/getMeasureTypeListResponse")
     public List<MeasureType> getMeasureTypeList();
+
+    /**
+     * 
+     * @param type
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(name = "idMeasureType", targetNamespace = "")
+    @RequestWrapper(localName = "getIdMeasureTypeByType", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetIdMeasureTypeByType")
+    @ResponseWrapper(localName = "getIdMeasureTypeByTypeResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetIdMeasureTypeByTypeResponse")
+    @Action(input = "http://webservice.storage.lifecoach/Storage/getIdMeasureTypeByTypeRequest", output = "http://webservice.storage.lifecoach/Storage/getIdMeasureTypeByTypeResponse")
+    public int getIdMeasureTypeByType(
+        @WebParam(name = "type", targetNamespace = "")
+        String type);
+
+    /**
+     * 
+     * @param personId
+     * @return
+     *     returns java.util.List<lifecoach.localdb.webservice.Goal>
+     */
+    @WebMethod
+    @WebResult(name = "goalList", targetNamespace = "")
+    @RequestWrapper(localName = "getGoals", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoals")
+    @ResponseWrapper(localName = "getGoalsResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalsResponse")
+    @Action(input = "http://webservice.storage.lifecoach/Storage/getGoalsRequest", output = "http://webservice.storage.lifecoach/Storage/getGoalsResponse")
+    public List<Goal> getGoals(
+        @WebParam(name = "personId", targetNamespace = "")
+        int personId);
 
     /**
      * 
@@ -338,6 +386,7 @@ public interface Storage {
 
     /**
      * 
+     * @param personId
      * @param title
      * @return
      *     returns lifecoach.localdb.webservice.Goal
@@ -348,6 +397,8 @@ public interface Storage {
     @ResponseWrapper(localName = "getGoalByTitleResponse", targetNamespace = "http://webservice.storage.lifecoach/", className = "lifecoach.storage.webservice.GetGoalByTitleResponse")
     @Action(input = "http://webservice.storage.lifecoach/Storage/getGoalByTitleRequest", output = "http://webservice.storage.lifecoach/Storage/getGoalByTitleResponse")
     public Goal getGoalByTitle(
+        @WebParam(name = "personId", targetNamespace = "")
+        int personId,
         @WebParam(name = "title", targetNamespace = "")
         String title);
 

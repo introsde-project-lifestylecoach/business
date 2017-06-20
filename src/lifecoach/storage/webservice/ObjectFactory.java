@@ -25,79 +25,61 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _GetBmiResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getBmiResponse");
-    private final static QName _GetGoalTypeListResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalTypeListResponse");
-    private final static QName _GetLastMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasure");
-    private final static QName _UpdateGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "updateGoalResponse");
     private final static QName _CreatePersonResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "createPersonResponse");
-    private final static QName _DeletePerson_QNAME = new QName("http://webservice.storage.lifecoach/", "deletePerson");
     private final static QName _GetMeasureTypeListResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureTypeListResponse");
-    private final static QName _ReadMeasureTypeResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasureTypeResponse");
-    private final static QName _UpdateGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "updateGoal");
     private final static QName _CreatePerson_QNAME = new QName("http://webservice.storage.lifecoach/", "createPerson");
     private final static QName _GetLastMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasureResponse");
     private final static QName _ReadGoalType_QNAME = new QName("http://webservice.storage.lifecoach/", "readGoalType");
     private final static QName _GetGoalTypeList_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalTypeList");
     private final static QName _GetSomeMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getSomeMeasureResponse");
     private final static QName _ReadGoalTypeResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readGoalTypeResponse");
-    private final static QName _ReadMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasure");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readPersonResponse");
-    private final static QName _CreateGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "createGoalResponse");
+    private final static QName _GetIdMeasureTypeByTypeResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getIdMeasureTypeByTypeResponse");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "updatePersonResponse");
-    private final static QName _ReadPerson_QNAME = new QName("http://webservice.storage.lifecoach/", "readPerson");
+    private final static QName _GetGoals_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoals");
+    private final static QName _GetGoalsResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalsResponse");
     private final static QName _UpdateMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "updateMeasureResponse");
-    private final static QName _CreateGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "createGoal");
     private final static QName _DeleteGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteGoal");
-    private final static QName _GetGoalByTitle_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalByTitle");
     private final static QName _UpdatePerson_QNAME = new QName("http://webservice.storage.lifecoach/", "updatePerson");
     private final static QName _GetMeasureTypeList_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureTypeList");
     private final static QName _DeleteGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteGoalResponse");
     private final static QName _GetBmi_QNAME = new QName("http://webservice.storage.lifecoach/", "getBmi");
-    private final static QName _DeleteMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteMeasure");
-    private final static QName _GetGoalByTitleResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalByTitleResponse");
     private final static QName _ReadMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasureResponse");
-    private final static QName _ReadGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "readGoal");
-    private final static QName _GetMeasureHistoryResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureHistoryResponse");
+    private final static QName _GetLastMeasureByTypeResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasureByTypeResponse");
     private final static QName _ReadMeasureType_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasureType");
-    private final static QName _DeletePersonResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "deletePersonResponse");
     private final static QName _GetMeasureHistory_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureHistory");
-    private final static QName _CreateMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "createMeasure");
-    private final static QName _UpdateMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "updateMeasure");
     private final static QName _ReadGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readGoalResponse");
     private final static QName _CreateMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "createMeasureResponse");
-    private final static QName _GetGoalHistoryResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalHistoryResponse");
     private final static QName _DeleteMeasureResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteMeasureResponse");
-    private final static QName _GetSomeMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "getSomeMeasure");
     private final static QName _GetGoalHistory_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalHistory");
+    private final static QName _GetGoalTypeListResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalTypeListResponse");
+    private final static QName _GetLastMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasure");
+    private final static QName _UpdateGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "updateGoalResponse");
+    private final static QName _DeletePerson_QNAME = new QName("http://webservice.storage.lifecoach/", "deletePerson");
+    private final static QName _ReadMeasureTypeResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasureTypeResponse");
+    private final static QName _UpdateGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "updateGoal");
+    private final static QName _GetLastMeasureByType_QNAME = new QName("http://webservice.storage.lifecoach/", "getLastMeasureByType");
+    private final static QName _ReadMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "readMeasure");
+    private final static QName _CreateGoalResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "createGoalResponse");
+    private final static QName _ReadPerson_QNAME = new QName("http://webservice.storage.lifecoach/", "readPerson");
+    private final static QName _CreateGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "createGoal");
+    private final static QName _GetGoalByTitle_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalByTitle");
+    private final static QName _DeleteMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "deleteMeasure");
+    private final static QName _GetGoalByTitleResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalByTitleResponse");
+    private final static QName _ReadGoal_QNAME = new QName("http://webservice.storage.lifecoach/", "readGoal");
+    private final static QName _GetMeasureHistoryResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getMeasureHistoryResponse");
+    private final static QName _GetIdMeasureTypeByType_QNAME = new QName("http://webservice.storage.lifecoach/", "getIdMeasureTypeByType");
+    private final static QName _DeletePersonResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "deletePersonResponse");
+    private final static QName _CreateMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "createMeasure");
+    private final static QName _UpdateMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "updateMeasure");
+    private final static QName _GetGoalHistoryResponse_QNAME = new QName("http://webservice.storage.lifecoach/", "getGoalHistoryResponse");
+    private final static QName _GetSomeMeasure_QNAME = new QName("http://webservice.storage.lifecoach/", "getSomeMeasure");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: lifecoach.storage.webservice
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link GetBmi }
-     * 
-     */
-    public GetBmi createGetBmi() {
-        return new GetBmi();
-    }
-
-    /**
-     * Create an instance of {@link DeleteGoalResponse }
-     * 
-     */
-    public DeleteGoalResponse createDeleteGoalResponse() {
-        return new DeleteGoalResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetMeasureTypeList }
-     * 
-     */
-    public GetMeasureTypeList createGetMeasureTypeList() {
-        return new GetMeasureTypeList();
     }
 
     /**
@@ -117,14 +99,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadMeasureResponse }
-     * 
-     */
-    public ReadMeasureResponse createReadMeasureResponse() {
-        return new ReadMeasureResponse();
-    }
-
-    /**
      * Create an instance of {@link GetMeasureHistoryResponse }
      * 
      */
@@ -141,14 +115,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetMeasureHistory }
-     * 
-     */
-    public GetMeasureHistory createGetMeasureHistory() {
-        return new GetMeasureHistory();
-    }
-
-    /**
      * Create an instance of {@link DeletePersonResponse }
      * 
      */
@@ -157,11 +123,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadMeasureType }
+     * Create an instance of {@link GetIdMeasureTypeByType }
      * 
      */
-    public ReadMeasureType createReadMeasureType() {
-        return new ReadMeasureType();
+    public GetIdMeasureTypeByType createGetIdMeasureTypeByType() {
+        return new GetIdMeasureTypeByType();
     }
 
     /**
@@ -181,35 +147,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreateMeasureResponse }
-     * 
-     */
-    public CreateMeasureResponse createCreateMeasureResponse() {
-        return new CreateMeasureResponse();
-    }
-
-    /**
      * Create an instance of {@link GetGoalHistoryResponse }
      * 
      */
     public GetGoalHistoryResponse createGetGoalHistoryResponse() {
         return new GetGoalHistoryResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReadGoalResponse }
-     * 
-     */
-    public ReadGoalResponse createReadGoalResponse() {
-        return new ReadGoalResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetGoalHistory }
-     * 
-     */
-    public GetGoalHistory createGetGoalHistory() {
-        return new GetGoalHistory();
     }
 
     /**
@@ -221,35 +163,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteMeasureResponse }
-     * 
-     */
-    public DeleteMeasureResponse createDeleteMeasureResponse() {
-        return new DeleteMeasureResponse();
-    }
-
-    /**
      * Create an instance of {@link DeletePerson }
      * 
      */
     public DeletePerson createDeletePerson() {
         return new DeletePerson();
-    }
-
-    /**
-     * Create an instance of {@link CreatePersonResponse }
-     * 
-     */
-    public CreatePersonResponse createCreatePersonResponse() {
-        return new CreatePersonResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetBmiResponse }
-     * 
-     */
-    public GetBmiResponse createGetBmiResponse() {
-        return new GetBmiResponse();
     }
 
     /**
@@ -277,19 +195,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreatePerson }
+     * Create an instance of {@link GetLastMeasureByType }
      * 
      */
-    public CreatePerson createCreatePerson() {
-        return new CreatePerson();
-    }
-
-    /**
-     * Create an instance of {@link GetMeasureTypeListResponse }
-     * 
-     */
-    public GetMeasureTypeListResponse createGetMeasureTypeListResponse() {
-        return new GetMeasureTypeListResponse();
+    public GetLastMeasureByType createGetLastMeasureByType() {
+        return new GetLastMeasureByType();
     }
 
     /**
@@ -306,6 +216,166 @@ public class ObjectFactory {
      */
     public UpdateGoal createUpdateGoal() {
         return new UpdateGoal();
+    }
+
+    /**
+     * Create an instance of {@link CreateGoalResponse }
+     * 
+     */
+    public CreateGoalResponse createCreateGoalResponse() {
+        return new CreateGoalResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasure }
+     * 
+     */
+    public ReadMeasure createReadMeasure() {
+        return new ReadMeasure();
+    }
+
+    /**
+     * Create an instance of {@link ReadPerson }
+     * 
+     */
+    public ReadPerson createReadPerson() {
+        return new ReadPerson();
+    }
+
+    /**
+     * Create an instance of {@link CreateGoal }
+     * 
+     */
+    public CreateGoal createCreateGoal() {
+        return new CreateGoal();
+    }
+
+    /**
+     * Create an instance of {@link GetGoalByTitle }
+     * 
+     */
+    public GetGoalByTitle createGetGoalByTitle() {
+        return new GetGoalByTitle();
+    }
+
+    /**
+     * Create an instance of {@link GetBmi }
+     * 
+     */
+    public GetBmi createGetBmi() {
+        return new GetBmi();
+    }
+
+    /**
+     * Create an instance of {@link DeleteGoalResponse }
+     * 
+     */
+    public DeleteGoalResponse createDeleteGoalResponse() {
+        return new DeleteGoalResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetMeasureTypeList }
+     * 
+     */
+    public GetMeasureTypeList createGetMeasureTypeList() {
+        return new GetMeasureTypeList();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasureResponse }
+     * 
+     */
+    public ReadMeasureResponse createReadMeasureResponse() {
+        return new ReadMeasureResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetLastMeasureByTypeResponse }
+     * 
+     */
+    public GetLastMeasureByTypeResponse createGetLastMeasureByTypeResponse() {
+        return new GetLastMeasureByTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetMeasureHistory }
+     * 
+     */
+    public GetMeasureHistory createGetMeasureHistory() {
+        return new GetMeasureHistory();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasureType }
+     * 
+     */
+    public ReadMeasureType createReadMeasureType() {
+        return new ReadMeasureType();
+    }
+
+    /**
+     * Create an instance of {@link CreateMeasureResponse }
+     * 
+     */
+    public CreateMeasureResponse createCreateMeasureResponse() {
+        return new CreateMeasureResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadGoalResponse }
+     * 
+     */
+    public ReadGoalResponse createReadGoalResponse() {
+        return new ReadGoalResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetGoalHistory }
+     * 
+     */
+    public GetGoalHistory createGetGoalHistory() {
+        return new GetGoalHistory();
+    }
+
+    /**
+     * Create an instance of {@link DeleteMeasureResponse }
+     * 
+     */
+    public DeleteMeasureResponse createDeleteMeasureResponse() {
+        return new DeleteMeasureResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreatePersonResponse }
+     * 
+     */
+    public CreatePersonResponse createCreatePersonResponse() {
+        return new CreatePersonResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBmiResponse }
+     * 
+     */
+    public GetBmiResponse createGetBmiResponse() {
+        return new GetBmiResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreatePerson }
+     * 
+     */
+    public CreatePerson createCreatePerson() {
+        return new CreatePerson();
+    }
+
+    /**
+     * Create an instance of {@link GetMeasureTypeListResponse }
+     * 
+     */
+    public GetMeasureTypeListResponse createGetMeasureTypeListResponse() {
+        return new GetMeasureTypeListResponse();
     }
 
     /**
@@ -349,27 +419,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetIdMeasureTypeByTypeResponse }
+     * 
+     */
+    public GetIdMeasureTypeByTypeResponse createGetIdMeasureTypeByTypeResponse() {
+        return new GetIdMeasureTypeByTypeResponse();
+    }
+
+    /**
      * Create an instance of {@link UpdatePersonResponse }
      * 
      */
     public UpdatePersonResponse createUpdatePersonResponse() {
         return new UpdatePersonResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreateGoalResponse }
-     * 
-     */
-    public CreateGoalResponse createCreateGoalResponse() {
-        return new CreateGoalResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReadMeasure }
-     * 
-     */
-    public ReadMeasure createReadMeasure() {
-        return new ReadMeasure();
     }
 
     /**
@@ -381,19 +443,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadPerson }
+     * Create an instance of {@link GetGoals }
      * 
      */
-    public ReadPerson createReadPerson() {
-        return new ReadPerson();
-    }
-
-    /**
-     * Create an instance of {@link CreateGoal }
-     * 
-     */
-    public CreateGoal createCreateGoal() {
-        return new CreateGoal();
+    public GetGoals createGetGoals() {
+        return new GetGoals();
     }
 
     /**
@@ -402,6 +456,14 @@ public class ObjectFactory {
      */
     public DeleteGoal createDeleteGoal() {
         return new DeleteGoal();
+    }
+
+    /**
+     * Create an instance of {@link GetGoalsResponse }
+     * 
+     */
+    public GetGoalsResponse createGetGoalsResponse() {
+        return new GetGoalsResponse();
     }
 
     /**
@@ -421,47 +483,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetGoalByTitle }
-     * 
-     */
-    public GetGoalByTitle createGetGoalByTitle() {
-        return new GetGoalByTitle();
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetBmiResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getBmiResponse")
     public JAXBElement<GetBmiResponse> createGetBmiResponse(GetBmiResponse value) {
         return new JAXBElement<GetBmiResponse>(_GetBmiResponse_QNAME, GetBmiResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalTypeListResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalTypeListResponse")
-    public JAXBElement<GetGoalTypeListResponse> createGetGoalTypeListResponse(GetGoalTypeListResponse value) {
-        return new JAXBElement<GetGoalTypeListResponse>(_GetGoalTypeListResponse_QNAME, GetGoalTypeListResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetLastMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getLastMeasure")
-    public JAXBElement<GetLastMeasure> createGetLastMeasure(GetLastMeasure value) {
-        return new JAXBElement<GetLastMeasure>(_GetLastMeasure_QNAME, GetLastMeasure.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoalResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateGoalResponse")
-    public JAXBElement<UpdateGoalResponse> createUpdateGoalResponse(UpdateGoalResponse value) {
-        return new JAXBElement<UpdateGoalResponse>(_UpdateGoalResponse_QNAME, UpdateGoalResponse.class, null, value);
     }
 
     /**
@@ -474,39 +501,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deletePerson")
-    public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
-        return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetMeasureTypeListResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getMeasureTypeListResponse")
     public JAXBElement<GetMeasureTypeListResponse> createGetMeasureTypeListResponse(GetMeasureTypeListResponse value) {
         return new JAXBElement<GetMeasureTypeListResponse>(_GetMeasureTypeListResponse_QNAME, GetMeasureTypeListResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureTypeResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readMeasureTypeResponse")
-    public JAXBElement<ReadMeasureTypeResponse> createReadMeasureTypeResponse(ReadMeasureTypeResponse value) {
-        return new JAXBElement<ReadMeasureTypeResponse>(_ReadMeasureTypeResponse_QNAME, ReadMeasureTypeResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateGoal")
-    public JAXBElement<UpdateGoal> createUpdateGoal(UpdateGoal value) {
-        return new JAXBElement<UpdateGoal>(_UpdateGoal_QNAME, UpdateGoal.class, null, value);
     }
 
     /**
@@ -564,15 +564,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readMeasure")
-    public JAXBElement<ReadMeasure> createReadMeasure(ReadMeasure value) {
-        return new JAXBElement<ReadMeasure>(_ReadMeasure_QNAME, ReadMeasure.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadPersonResponse }{@code >}}
      * 
      */
@@ -582,12 +573,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoalResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetIdMeasureTypeByTypeResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createGoalResponse")
-    public JAXBElement<CreateGoalResponse> createCreateGoalResponse(CreateGoalResponse value) {
-        return new JAXBElement<CreateGoalResponse>(_CreateGoalResponse_QNAME, CreateGoalResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getIdMeasureTypeByTypeResponse")
+    public JAXBElement<GetIdMeasureTypeByTypeResponse> createGetIdMeasureTypeByTypeResponse(GetIdMeasureTypeByTypeResponse value) {
+        return new JAXBElement<GetIdMeasureTypeByTypeResponse>(_GetIdMeasureTypeByTypeResponse_QNAME, GetIdMeasureTypeByTypeResponse.class, null, value);
     }
 
     /**
@@ -600,12 +591,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadPerson }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoals }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readPerson")
-    public JAXBElement<ReadPerson> createReadPerson(ReadPerson value) {
-        return new JAXBElement<ReadPerson>(_ReadPerson_QNAME, ReadPerson.class, null, value);
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoals")
+    public JAXBElement<GetGoals> createGetGoals(GetGoals value) {
+        return new JAXBElement<GetGoals>(_GetGoals_QNAME, GetGoals.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalsResponse")
+    public JAXBElement<GetGoalsResponse> createGetGoalsResponse(GetGoalsResponse value) {
+        return new JAXBElement<GetGoalsResponse>(_GetGoalsResponse_QNAME, GetGoalsResponse.class, null, value);
     }
 
     /**
@@ -618,30 +618,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createGoal")
-    public JAXBElement<CreateGoal> createCreateGoal(CreateGoal value) {
-        return new JAXBElement<CreateGoal>(_CreateGoal_QNAME, CreateGoal.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteGoal }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deleteGoal")
     public JAXBElement<DeleteGoal> createDeleteGoal(DeleteGoal value) {
         return new JAXBElement<DeleteGoal>(_DeleteGoal_QNAME, DeleteGoal.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalByTitle }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalByTitle")
-    public JAXBElement<GetGoalByTitle> createGetGoalByTitle(GetGoalByTitle value) {
-        return new JAXBElement<GetGoalByTitle>(_GetGoalByTitle_QNAME, GetGoalByTitle.class, null, value);
     }
 
     /**
@@ -681,24 +663,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deleteMeasure")
-    public JAXBElement<DeleteMeasure> createDeleteMeasure(DeleteMeasure value) {
-        return new JAXBElement<DeleteMeasure>(_DeleteMeasure_QNAME, DeleteMeasure.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalByTitleResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalByTitleResponse")
-    public JAXBElement<GetGoalByTitleResponse> createGetGoalByTitleResponse(GetGoalByTitleResponse value) {
-        return new JAXBElement<GetGoalByTitleResponse>(_GetGoalByTitleResponse_QNAME, GetGoalByTitleResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureResponse }{@code >}}
      * 
      */
@@ -708,21 +672,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadGoal }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLastMeasureByTypeResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readGoal")
-    public JAXBElement<ReadGoal> createReadGoal(ReadGoal value) {
-        return new JAXBElement<ReadGoal>(_ReadGoal_QNAME, ReadGoal.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetMeasureHistoryResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getMeasureHistoryResponse")
-    public JAXBElement<GetMeasureHistoryResponse> createGetMeasureHistoryResponse(GetMeasureHistoryResponse value) {
-        return new JAXBElement<GetMeasureHistoryResponse>(_GetMeasureHistoryResponse_QNAME, GetMeasureHistoryResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getLastMeasureByTypeResponse")
+    public JAXBElement<GetLastMeasureByTypeResponse> createGetLastMeasureByTypeResponse(GetLastMeasureByTypeResponse value) {
+        return new JAXBElement<GetLastMeasureByTypeResponse>(_GetLastMeasureByTypeResponse_QNAME, GetLastMeasureByTypeResponse.class, null, value);
     }
 
     /**
@@ -735,39 +690,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePersonResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deletePersonResponse")
-    public JAXBElement<DeletePersonResponse> createDeletePersonResponse(DeletePersonResponse value) {
-        return new JAXBElement<DeletePersonResponse>(_DeletePersonResponse_QNAME, DeletePersonResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetMeasureHistory }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getMeasureHistory")
     public JAXBElement<GetMeasureHistory> createGetMeasureHistory(GetMeasureHistory value) {
         return new JAXBElement<GetMeasureHistory>(_GetMeasureHistory_QNAME, GetMeasureHistory.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createMeasure")
-    public JAXBElement<CreateMeasure> createCreateMeasure(CreateMeasure value) {
-        return new JAXBElement<CreateMeasure>(_CreateMeasure_QNAME, CreateMeasure.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateMeasure")
-    public JAXBElement<UpdateMeasure> createUpdateMeasure(UpdateMeasure value) {
-        return new JAXBElement<UpdateMeasure>(_UpdateMeasure_QNAME, UpdateMeasure.class, null, value);
     }
 
     /**
@@ -789,15 +717,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalHistoryResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalHistoryResponse")
-    public JAXBElement<GetGoalHistoryResponse> createGetGoalHistoryResponse(GetGoalHistoryResponse value) {
-        return new JAXBElement<GetGoalHistoryResponse>(_GetGoalHistoryResponse_QNAME, GetGoalHistoryResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteMeasureResponse }{@code >}}
      * 
      */
@@ -807,21 +726,210 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSomeMeasure }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getSomeMeasure")
-    public JAXBElement<GetSomeMeasure> createGetSomeMeasure(GetSomeMeasure value) {
-        return new JAXBElement<GetSomeMeasure>(_GetSomeMeasure_QNAME, GetSomeMeasure.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalHistory }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalHistory")
     public JAXBElement<GetGoalHistory> createGetGoalHistory(GetGoalHistory value) {
         return new JAXBElement<GetGoalHistory>(_GetGoalHistory_QNAME, GetGoalHistory.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalTypeListResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalTypeListResponse")
+    public JAXBElement<GetGoalTypeListResponse> createGetGoalTypeListResponse(GetGoalTypeListResponse value) {
+        return new JAXBElement<GetGoalTypeListResponse>(_GetGoalTypeListResponse_QNAME, GetGoalTypeListResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLastMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getLastMeasure")
+    public JAXBElement<GetLastMeasure> createGetLastMeasure(GetLastMeasure value) {
+        return new JAXBElement<GetLastMeasure>(_GetLastMeasure_QNAME, GetLastMeasure.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoalResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateGoalResponse")
+    public JAXBElement<UpdateGoalResponse> createUpdateGoalResponse(UpdateGoalResponse value) {
+        return new JAXBElement<UpdateGoalResponse>(_UpdateGoalResponse_QNAME, UpdateGoalResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deletePerson")
+    public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
+        return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureTypeResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readMeasureTypeResponse")
+    public JAXBElement<ReadMeasureTypeResponse> createReadMeasureTypeResponse(ReadMeasureTypeResponse value) {
+        return new JAXBElement<ReadMeasureTypeResponse>(_ReadMeasureTypeResponse_QNAME, ReadMeasureTypeResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateGoal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateGoal")
+    public JAXBElement<UpdateGoal> createUpdateGoal(UpdateGoal value) {
+        return new JAXBElement<UpdateGoal>(_UpdateGoal_QNAME, UpdateGoal.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLastMeasureByType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getLastMeasureByType")
+    public JAXBElement<GetLastMeasureByType> createGetLastMeasureByType(GetLastMeasureByType value) {
+        return new JAXBElement<GetLastMeasureByType>(_GetLastMeasureByType_QNAME, GetLastMeasureByType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readMeasure")
+    public JAXBElement<ReadMeasure> createReadMeasure(ReadMeasure value) {
+        return new JAXBElement<ReadMeasure>(_ReadMeasure_QNAME, ReadMeasure.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoalResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createGoalResponse")
+    public JAXBElement<CreateGoalResponse> createCreateGoalResponse(CreateGoalResponse value) {
+        return new JAXBElement<CreateGoalResponse>(_CreateGoalResponse_QNAME, CreateGoalResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadPerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readPerson")
+    public JAXBElement<ReadPerson> createReadPerson(ReadPerson value) {
+        return new JAXBElement<ReadPerson>(_ReadPerson_QNAME, ReadPerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateGoal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createGoal")
+    public JAXBElement<CreateGoal> createCreateGoal(CreateGoal value) {
+        return new JAXBElement<CreateGoal>(_CreateGoal_QNAME, CreateGoal.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalByTitle }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalByTitle")
+    public JAXBElement<GetGoalByTitle> createGetGoalByTitle(GetGoalByTitle value) {
+        return new JAXBElement<GetGoalByTitle>(_GetGoalByTitle_QNAME, GetGoalByTitle.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deleteMeasure")
+    public JAXBElement<DeleteMeasure> createDeleteMeasure(DeleteMeasure value) {
+        return new JAXBElement<DeleteMeasure>(_DeleteMeasure_QNAME, DeleteMeasure.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalByTitleResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalByTitleResponse")
+    public JAXBElement<GetGoalByTitleResponse> createGetGoalByTitleResponse(GetGoalByTitleResponse value) {
+        return new JAXBElement<GetGoalByTitleResponse>(_GetGoalByTitleResponse_QNAME, GetGoalByTitleResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadGoal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "readGoal")
+    public JAXBElement<ReadGoal> createReadGoal(ReadGoal value) {
+        return new JAXBElement<ReadGoal>(_ReadGoal_QNAME, ReadGoal.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetMeasureHistoryResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getMeasureHistoryResponse")
+    public JAXBElement<GetMeasureHistoryResponse> createGetMeasureHistoryResponse(GetMeasureHistoryResponse value) {
+        return new JAXBElement<GetMeasureHistoryResponse>(_GetMeasureHistoryResponse_QNAME, GetMeasureHistoryResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetIdMeasureTypeByType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getIdMeasureTypeByType")
+    public JAXBElement<GetIdMeasureTypeByType> createGetIdMeasureTypeByType(GetIdMeasureTypeByType value) {
+        return new JAXBElement<GetIdMeasureTypeByType>(_GetIdMeasureTypeByType_QNAME, GetIdMeasureTypeByType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePersonResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "deletePersonResponse")
+    public JAXBElement<DeletePersonResponse> createDeletePersonResponse(DeletePersonResponse value) {
+        return new JAXBElement<DeletePersonResponse>(_DeletePersonResponse_QNAME, DeletePersonResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "createMeasure")
+    public JAXBElement<CreateMeasure> createCreateMeasure(CreateMeasure value) {
+        return new JAXBElement<CreateMeasure>(_CreateMeasure_QNAME, CreateMeasure.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "updateMeasure")
+    public JAXBElement<UpdateMeasure> createUpdateMeasure(UpdateMeasure value) {
+        return new JAXBElement<UpdateMeasure>(_UpdateMeasure_QNAME, UpdateMeasure.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetGoalHistoryResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getGoalHistoryResponse")
+    public JAXBElement<GetGoalHistoryResponse> createGetGoalHistoryResponse(GetGoalHistoryResponse value) {
+        return new JAXBElement<GetGoalHistoryResponse>(_GetGoalHistoryResponse_QNAME, GetGoalHistoryResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSomeMeasure }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.storage.lifecoach/", name = "getSomeMeasure")
+    public JAXBElement<GetSomeMeasure> createGetSomeMeasure(GetSomeMeasure value) {
+        return new JAXBElement<GetSomeMeasure>(_GetSomeMeasure_QNAME, GetSomeMeasure.class, null, value);
     }
 
 }

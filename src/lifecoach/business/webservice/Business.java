@@ -5,6 +5,9 @@ import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
 import lifecoach.adaptor.webservice.Bmi;
+import lifecoach.business.model.GoalBusiness;
+
+import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -49,6 +52,10 @@ public interface Business
        
     
     /* Goal */
+    
+    @WebMethod(operationName="getGoals")
+    @WebResult(name="listGoalBusiness") 
+    public List<GoalBusiness> getGoals(@WebParam(name="personId") int pId);
     
     @WebMethod(operationName="createGoal")
     @WebResult(name="goalId") 

@@ -8,8 +8,10 @@ import lifecoach.localdb.webservice.Measure;
 import lifecoach.localdb.webservice.Goal;
 
 import lifecoach.adaptor.webservice.Bmi;
+import lifecoach.business.model.GoalBusiness;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Date;
 
 import java.time.LocalDate;
@@ -109,7 +111,54 @@ public class BusinessImplementation implements Business
     
     
     /* Manage MeasureType */
-       
+    
+    @Override
+    public List<GoalBusiness> getGoals(int pId) {
+    	init();
+    	float measure_value, goal_value; 
+    	List<GoalBusiness> gbList = new ArrayList<GoalBusiness>();
+    	List<Goal> gList = storage.getGoals(pId);
+    	GoalBusiness gb = null;
+    	for(Goal g: gList)
+    	{
+    		gb = new GoalBusiness(g, false);	// TODO Check that gb is a new instance every cycle  
+    		gbList.add(gb);
+    		switch(g.getGoalType().getType())
+    		{
+    			case "increase":
+    				System.out.println("Check goal for increase");
+    				measure_value = storage.getLastMeasureByType(pId, g.getMeasureType().getType()).getValue();
+    				goal_value = g.getValue();
+    				System.out.println("->" + measure_value + " > " + goal_value);
+    				if(measure_value > goal_value)
+    				{
+    					gb.setDone(true);
+    				}
+    				break;
+    			case "decrease":
+    				System.out.println("Check goal for decrease");
+    				measure_value = storage.getLastMeasureByType(pId, g.getMeasureType().getType()).getValue();
+    				goal_value = g.getValue();
+    				System.out.println("->" + measure_value + " < " + goal_value);
+    				if(measure_value < goal_value)
+    				{
+    					gb.setDone(true);
+    				}
+    				break;
+    			case "daily":
+    				System.out.println("Check goal for daily");
+    				// TODO
+    				break;
+    			case "amount":
+    				System.out.println("Check goal for amount");
+    				// TODO
+    				break;
+    		}
+    	}
+    	
+    	return gbList;
+    }
+    
     @Override
     public int addGoal(int pId, Goal goal) {
     	init();
@@ -132,7 +181,7 @@ public class BusinessImplementation implements Business
     	init();
     	System.out.println("Update Goal with id = " + goal.getIdGoal());
 
-		Goal g = storage.getGoalByTitle(oldGoal);
+		Goal g = storage.getGoalByTitle(pId, oldGoal);
 		if(g == null)
 			g = new Goal();
 	
