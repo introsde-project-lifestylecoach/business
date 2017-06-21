@@ -190,7 +190,6 @@ public class BusinessImplementation implements Business
 		if(g == null)
 			g = new Goal();
 
-		g.setIdGoal(goal.getIdGoal());
 		g.setTitle(goal.getTitle());
 		g.setDescription(goal.getDescription());
 		g.setGoalType(goal.getGoalType());
@@ -205,6 +204,14 @@ public class BusinessImplementation implements Business
     	init();
     	System.out.println("Delete Goal with id = " + id);
     	return storage.deleteGoal(id);
+    }
+    
+    @Override
+    public int deleteGoalByTitle(int id, String title) {
+    	init();
+    	System.out.println("Delete Goal with id = " + id + " and title " + title);
+    	Goal g = storage.getGoalByTitle(id, title);
+    	return storage.deleteGoal(g.getIdGoal());
     }
    
     

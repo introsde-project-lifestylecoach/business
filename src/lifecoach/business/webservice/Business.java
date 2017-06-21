@@ -69,6 +69,10 @@ public interface Business
     @WebResult(name="result") 
     public int deleteGoal(@WebParam(name="goalId") int id);
     
+    @WebMethod(operationName="deleteGoalByTitle")
+    @WebResult(name="result") 
+    public int deleteGoalByTitle(@WebParam(name="goalId") int id, @WebParam(name="title") String title);
+    
     
     /* Bmi */
     @WebMethod(operationName="getBmi")
