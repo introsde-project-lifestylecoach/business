@@ -184,7 +184,8 @@ public class BusinessImplementation implements Business
 		Goal g = storage.getGoalByTitle(pId, oldGoal);
 		if(g == null)
 			g = new Goal();
-	
+
+		g.setIdGoal(goal.getIdGoal());
 		g.setTitle(goal.getTitle());
 		g.setDescription(goal.getDescription());
 		g.setGoalType(goal.getGoalType());
