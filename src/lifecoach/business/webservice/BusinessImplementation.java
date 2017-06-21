@@ -115,7 +115,8 @@ public class BusinessImplementation implements Business
     @Override
     public List<GoalBusiness> getGoals(int pId) {
     	init();
-    	float measure_value, goal_value; 
+    	float measure_value, goal_value;
+    	Measure last_measure = null;
     	List<GoalBusiness> gbList = new ArrayList<GoalBusiness>();
     	List<Goal> gList = storage.getGoals(pId);
     	GoalBusiness gb = null;
@@ -127,12 +128,16 @@ public class BusinessImplementation implements Business
     		{
     			case "increase":
     				System.out.println("Check goal for increase");
-    				measure_value = storage.getLastMeasureByType(pId, g.getMeasureType().getType()).getValue();
-    				goal_value = g.getValue();
-    				System.out.println("->" + measure_value + " > " + goal_value);
-    				if(measure_value > goal_value)
+    				last_measure = storage.getLastMeasureByType(pId, g.getMeasureType().getType());
+    				if(last_measure != null)
     				{
-    					gb.setDone(true);
+    					measure_value = last_measure.getValue();
+	    				goal_value = g.getValue();
+	    				System.out.println("->" + measure_value + " > " + goal_value);
+	    				if(measure_value > goal_value)
+	    				{
+	    					gb.setDone(true);
+	    				}
     				}
     				break;
     			case "decrease":
