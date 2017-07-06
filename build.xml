@@ -37,7 +37,8 @@
         <property name="lib.dir" value="WebContent/WEB-INF/lib" />
         <property name="web.dir" value="." />
         <property name="webcontent.dir" value="WebContent" />
-		<property name="wsdl" value="http://127.0.1.1:6902/ws/storage?wsdl"/>    
+		<!-- <property name="wsdl" value="http://127.0.1.1:6902/ws/storage?wsdl"/> -->
+    	<property name="wsdl" value="https://introsde-lifecoach-storage.herokuapp.com/ws/storage/?wsdl"/>
         <!-- ================================= 
 	          target: resolve downloads the dependencies to your lib folder              
 	         ================================= -->
@@ -83,7 +84,7 @@
             </exec>  
         </target>    
     	
-        <target name="install" depends="clean, init, wsimport">
+        <target name="install" depends="clean, init">
             <echo message="Compile target has been called" />
             <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="lib.path.id" includeAntRuntime="false">
             </javac>
