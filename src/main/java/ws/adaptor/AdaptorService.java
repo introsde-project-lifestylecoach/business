@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "AdaptorService", targetNamespace = "http://webservice.adaptor.lifecoach/", wsdlLocation = "http://localhost:6904/ws/adaptorBmi?wsdl")
+@WebServiceClient(name = "AdaptorService", targetNamespace = "http://webservice.adaptor.lifecoach/", wsdlLocation = "https://introsde-lifecoach-adaptor.herokuapp.com/ws/adaptorBmi?wsdl")
 public class AdaptorService
     extends Service
 {
@@ -30,7 +30,7 @@ public class AdaptorService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:6904/ws/adaptorBmi?wsdl");
+            url = new URL("https://introsde-lifecoach-adaptor.herokuapp.com/ws/adaptorBmi?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
