@@ -14,17 +14,15 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 
-//import java.time.LocalDate;
-//import java.time.Period;
-//import java.time.format.DateTimeFormatter;
-//import java.time.format.DateTimeParseException;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import javax.jws.WebService;
-
-import org.joda.time.DateTime;
 
 
 //Service Implementation
@@ -249,27 +247,20 @@ public class BusinessImplementation implements Business
         	}
         }
         
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-//        LocalDate birthday = null;
-//        LocalDate today = LocalDate.now();
-//        try 
-//        {
-//        	birthday = LocalDate.parse(p.getBirthdate(), formatter);        	    	 
-//         	Period period = Period.between(birthday, today);     	 
-//         	age = period.getYears();
-//         	System.out.println("--> Age = " + age);
-//        }
-//	      catch (DateTimeParseException e) 
-//        {
-//	        e.printStackTrace();
-//	      }
-        
-        DateTime dt = new DateTime();
-        int year = dt.getYear();
-        
-        String[] birthdate = p.getBirthdate().split("/");
-        int n = birthdate.length;
-        age = year - Integer.parseInt(birthdate[n - 1]);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDate birthday = null;
+        LocalDate today = LocalDate.now();
+        try 
+        {
+        	birthday = LocalDate.parse(p.getBirthdate(), formatter);        	    	 
+         	Period period = Period.between(birthday, today);     	 
+         	age = period.getYears();
+         	System.out.println("--> Age = " + age);
+        }
+	    catch (DateTimeParseException e) 
+        {
+	        e.printStackTrace();
+	    }
         
         if(weight == 0 || height == 0 || age == 0)
         {

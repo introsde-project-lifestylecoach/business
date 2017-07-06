@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "StorageService", targetNamespace = "http://webservice.storage.lifecoach/", wsdlLocation = "https://introsde-lifecoach-storage.herokuapp.com/ws/storage/?wsdl")
+@WebServiceClient(name = "StorageService", targetNamespace = "http://webservice.storage.lifecoach/", wsdlLocation = "http://127.0.1.1:6902/ws/storage?wsdl")
 public class StorageService
     extends Service
 {
@@ -30,7 +30,7 @@ public class StorageService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("https://introsde-lifecoach-storage.herokuapp.com/ws/storage/?wsdl");
+            url = new URL("http://127.0.1.1:6902/ws/storage?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
