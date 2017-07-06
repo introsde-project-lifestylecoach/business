@@ -7,6 +7,7 @@
 *.jar
 *.war
 *.ear
+*.iml
 
 # Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -22,7 +23,9 @@ WebContent/
 build/
 bin/
 *dist/
+.idea/
 dist/
+target/
 
 # File di git
 # .gitignore
